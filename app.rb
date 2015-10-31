@@ -3,7 +3,7 @@ require 'sinatra'
 
 Opal::Processor.source_map_enabled = true
 opal = Opal::Server.new {|s|
-  s.append_path './app'
+  s.append_path 'app'
   s.main = 'home'
   s.debug = true
 }
