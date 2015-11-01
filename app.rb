@@ -5,7 +5,7 @@ Opal::Processor.source_map_enabled = true
 opal = Opal::Server.new {|s|
   s.append_path 'app'
   s.main = 'home'
-  s.debug = true
+  #s.debug = true
 }
 
 map opal.source_maps.prefix do
@@ -33,6 +33,16 @@ get '/' do
       </body>
     </html>
   HTML
+end
+
+get '/nodes' do
+  <<-JSON
+    [
+      { 
+        "node1": "fqdn.node.1"
+      }
+    ]
+  JSON
 end
 
 run Sinatra::Application
