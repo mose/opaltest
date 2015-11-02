@@ -1,2 +1,3 @@
-# hieraviz
-Experimental web interface for hieracles.
+# opaltest
+
+Experimental web interface using react.rb

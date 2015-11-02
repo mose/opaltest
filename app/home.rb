@@ -1,7 +1,7 @@
 require 'opal'
 require 'browser/interval'
-require 'jquery'
-require 'opal-jquery'
+# require 'jquery'
+# require 'opal-jquery'
 require 'json'
 require 'reactive-ruby'
   
@@ -19,7 +19,7 @@ class NodeBox
   required_param :url
   required_param :poll_interval
 
-  define_state nodes: JSON.from_object(`window.initial_nodes`)
+  define_state nodes: JSON.new
 
   before_mount do
     @fetcher = every(poll_interval) do
