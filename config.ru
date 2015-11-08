@@ -5,7 +5,7 @@ Bundler.require
 require 'opal'
 require 'sinatra'
 
-set :appname, 'hieraviz'
+set :appname, 'opaltest'
 
 Opal::Processor.source_map_enabled = false
 opal = Opal::Server.new {|s|
@@ -36,7 +36,7 @@ get '/' do
     <!doctype html>
     <html>
       <head>
-        <title>Hieraviz</title>
+        <title>Opaltest</title>
         <link rel="stylesheet" href="site.css" />
         <script src="/assets/home.js"></script>
         <script>#{Opal::Processor.load_asset_code(opal.sprockets, "home.js")}</script>
